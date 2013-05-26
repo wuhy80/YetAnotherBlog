@@ -6,6 +6,7 @@
 
     <ul>
     	<li><strong>生产日期</strong>: <%= time_format(post.created_at) %></li>
+    	<li><strong>作者</strong>: <%= post.name %></li>
     </ul>
 
     <% if is_authrized %>
@@ -15,4 +16,3 @@
 	                                     :method => :delete %>
     <% end %>
 <% end %>
- 

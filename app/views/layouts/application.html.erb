@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="utf-8">
 <head>
-  <title>YetAnotherBlog</title>
+  <title>我的博客</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
 	<div class="container-fluid">
 		<div class="row-fluid">
@@ -14,12 +15,10 @@
 		    <div class="container">
 		        <ul class="nav">
 				    <li>
-				    	<%= link_to "My Blog", posts_path %>
+				    	<%= link_to "首页", posts_path %>
 				    </li>
 				    <li class="divider-vertical"></li>
-				    <li><%= link_to "About", posts_path %></li>
-				    <li class="divider-vertical"></li>
-				    <li><a href="#">链接</a></li>
+				    <li><%= link_to "关于", posts_path %></li>
 				</ul>	    
 			</div>
 			</div>
@@ -28,7 +27,9 @@
 
 		<div class="row-fluid">
 			<div class="span9"><%= yield %></div>
-			<div class="span3"></div>
+			<div class="span3">
+				<%= yield :side_bar %>
+			</div>
 		</div>
 	</div>
 </body>
