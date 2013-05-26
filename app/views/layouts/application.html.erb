@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="utf-8">
+<head>
+  <title>YetAnotherBlog</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row-fluid">
+		<div class="navbar">
+		    <div class="navbar-inner">
+		    <div class="container">
+		        <ul class="nav">
+				    <li class="active">
+				    	<a href="#">首页</a>
+				    </li>
+				    <li class="divider-vertical"></li>
+				    <li><a href="#">链接</a></li>
+				    <li class="divider-vertical"></li>
+				    <li><a href="#">链接</a></li>
+				</ul>		    
+			</div>
+		    </div>
+	    </div>
+	    </div>
+		<div class="row-fluid">
+			<h1>这是主题</h1>
+			BootStrap 2在原有特性的基础上着重改进了用户的体验和交互性，比如新增加的媒体展示功能，适用于智能手机上多钟屏幕规格的响应式布局，另外新增了12款jQuery插件，可以满足Web页面常用的用户体验和交互功能。
+
+			BootStrap 2的运用
+		</div>
+
+	    <%= yield %>
+	</div>
+</body>
+</html>

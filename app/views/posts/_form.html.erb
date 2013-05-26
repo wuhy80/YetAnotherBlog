@@ -1,0 +1,31 @@
+
+<% @post.tags.build %>
+<%= form_for(@post) do |post_form| %>
+  <% if @post.errors.any? %>
+  <div id="errorExplanation">
+    <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+    <ul>
+    <% @post.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+  
+  <%= post_form.label :title %> <%= post_form.text_field :title %>
+
+  <br/>
+
+  <div class='wmd-panel'>
+    <div id='wmd-button-bar'></div>
+    <%= post_form.text_area :content, {:class=>"wmd-input"} %> 
+  </div>
+
+
+  <h2>Tags</h2>
+  <%= render :partial => 'tags/form',
+             :locals => {:form => post_form} %>
+  <div class="actions">
+    <%= post_form.submit %>
+  </div>
+<% end %>
