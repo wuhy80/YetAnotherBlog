@@ -1,0 +1,12 @@
+<% if !@posts.blank? %>
+	<ul class="unstyled recent_posts">
+	<% for item in @posts %>
+		<li>
+			<%= link_to	item.title, "posts/#{item.id}" %>
+			<span><%= item.created_at %></span>
+		</li>
+	<% end %>
+	</ul>
+<% else %>
+  
+<% end %>

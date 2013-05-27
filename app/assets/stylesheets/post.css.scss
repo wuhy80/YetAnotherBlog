@@ -2,3 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+ul.recent_posts {
+	 li {
+ 	   border-top: 1px solid rgb(216, 230, 248);
+	}
+
+	 li a {
+	    display: block;
+	    width: 260px;
+	    padding: 5px 0px;
+	}
+
+	 li span {
+	    color: rgb(222, 222, 222);
+	    font-family: Verdana,Arial,Helvetica,sans-serif;
+	    display: block;
+	    padding: 0px 0px 5px;
+	}
+}

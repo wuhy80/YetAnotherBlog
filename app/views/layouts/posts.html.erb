@@ -1,7 +1,9 @@
 <% content_for :side_bar do %>
-	李宗苗：车辆年检，195元/辆，全深圳300万辆，年收5.85亿元。
-
-	杨佩昌：在德国，汽车、公司都无需年检。我问德国人：汽车不年检，坏了怎么办？答：自己修车。问：企业不年检，公司倒闭如潮怎么办？德国人答：你看德国是这样的吗？我问：德国政府为何不强制年检？德国人反问：谁给了政府这个权力？如果政府对年检感兴趣，说明这种事对它有好处。
+	<%= render "shared/recent_posts", :collection => @posts %>
+	<%= render "shared/random_posts" %>
+	<%= render "shared/recent_comments" %>
+	<%= render "shared/tag_cloud" %>
+	<%= render "shared/share_wall" %>
 <% end %>
 
 <%= render :file => "layouts/application" %>
