@@ -1,11 +1,18 @@
 <% @posts.each do |post| %>
-    <h2><%= post.title %></h2>
-    
-    <%= markdown(post.content) %>
+    <div class="entry-head">
+        <h2><%= link_to post.title, {:controller=>"posts", :action=>"show", :id=>post.id} %></h2>
+        <div class="entry-cat">
+            [<%= time_format(post.created_at) %>]
+        </div>
+    </div>
+
+    <div class="posts-content">
+        <%= markdown(post.content) %>
+    </div>
 
     <ul>
     	<li><strong>生产日期</strong>: <%= time_format(post.created_at) %></li>
-    	<li><strong>作者</strong>: <%= post.name %></li>
+    	<li><strong>作者</strong>: <%= post.name ? post.name : "James Wu" %></li>
     </ul>
 
     <% if is_authrized %>

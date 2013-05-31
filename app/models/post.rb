@@ -1,6 +1,6 @@
 class Post < ActiveRecord::Base
 	attr_accessible :title, :content, :name, :tags_attributes
-	paginates_per  1
+	paginates_per  5
 	# validates	:name,	:presence => true
 	validates	:title,	:presence => true,
 						:length => {:minimum => 5}
