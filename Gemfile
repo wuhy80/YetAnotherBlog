@@ -42,4 +42,7 @@ gem 'rdiscount'
 
 # search engine
 gem 'sunspot_rails'
-gem 'sunspot_solr' # optional pre-packaged Solr distribution for use in development
+
+group :development do
+	gem 'sunspot_solr' # optional pre-packaged Solr distribution for use in development
+end
