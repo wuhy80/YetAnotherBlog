@@ -36,3 +36,5 @@ Markdown
 [Gem Taobao镜像站](http://ruby.taobao.org/)
 	国内的Gem经常容易被墙，这个时候有个国内的Gem源就是一个非常有用的东西了
 
+[基于Git的维基管理：gollum](http://www.yangzhiping.com/tech/gollum.html)
+	可以通过Git来管理Wiki，这样假设自己个人的Wiki系统是非常方便的
